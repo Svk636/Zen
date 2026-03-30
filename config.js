@@ -7,7 +7,7 @@
 
 window.APP_CONFIG = {
   groq: {
-    key:   'YOUR_GROQ_API_KEY_HERE',
+    key:   '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',
     model: 'qwen/qwen3-32b',       // optional — overrides default model
   },
   // gemini: { key: 'YOUR_GEMINI_KEY_HERE' },
