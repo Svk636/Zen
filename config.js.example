@@ -29,7 +29,7 @@ window.APP_CONFIG = {
   // ── Groq (free tier — recommended) ──────────────────────────────
   // Get key: https://console.groq.com/
   groq: {
-    key:   'YOUR_GROQ_API_KEY_HERE',      // e.g. gsk_xxxx...
+    key:   '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',      // e.g. gsk_xxxx...
     model: 'qwen/qwen3-32b',              // recommended free model
   },
 
