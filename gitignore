@@ -1,0 +1,50 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+#  झेन जर्नल — .gitignore
+# ═══════════════════════════════════════════════════════════════════════════════
+
+
+# ── Secrets / generated config ───────────────────────────────────────────────
+# NEVER commit a filled-in config.js — it contains API keys.
+# Commit config.js.example (no real keys) instead.
+config.js
+
+# Netlify build output (if build-config.js generates config.js locally)
+.netlify/
+
+
+# ── OS & editor noise ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+
+# ── Node (if you add a build step later) ─────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+
+# ── Local dev scratchpad ─────────────────────────────────────────────────────
+scratch/
+tmp/
+*.local
+
+
+# ── Icons source files (keep PNGs, ignore raw PSDs / Figma exports) ──────────
+icons/*.psd
+icons/*.fig
+icons/*.sketch
+icons/*.ai
+
+
+# ── Test / coverage artefacts ────────────────────────────────────────────────
+coverage/
+.nyc_output/

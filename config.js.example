@@ -1,0 +1,75 @@
+// ═══════════════════════════════════════════════════════════════════════════════
+//  झेन जर्नल — config.js.example
+//
+//  HOW TO USE
+//  ──────────
+//  Local dev:
+//    1. cp config.js.example config.js
+//    2. Fill in your keys below
+//    3. config.js is loaded by index.html before any app code
+//
+//  Netlify / production:
+//    Store secrets as Netlify environment variables (never commit config.js).
+//    A build script (build-config.js) reads process.env and writes config.js
+//    at deploy time.  See the Deploy guide inside the app (Guide → ११).
+//
+//  Key priority (highest → lowest):
+//    1. localStorage  (Settings panel in the app — overrides everything)
+//    2. window.APP_CONFIG  (this file)
+//    3. Hardcoded fallback  (safe anon / empty — no AI without a real key)
+//
+//  NEVER commit a filled-in config.js — it is listed in .gitignore.
+// ═══════════════════════════════════════════════════════════════════════════════
+
+window.APP_CONFIG = {
+
+  // ── Supabase ──────────────────────────────────────────────────────────────
+  // Required for cloud sync and multi-device support.
+  // Get these from: Supabase Dashboard → Project Settings → API
+  //
+  //   url : your project URL  e.g. https://abcdefghijkl.supabase.co
+  //   key : the *anon* public key (safe to expose — RLS locks it to auth.uid())
+  //         DO NOT use the service_role key here.
+  supabase: {
+    url: 'https://your-project-ref.supabase.co',
+    key: 'your-anon-public-key',
+  },
+
+  // ── AI provider ───────────────────────────────────────────────────────────
+  // Which provider to use for microstep generation and AIE directives.
+  // Values: 'groq' | 'gemini' | 'openai' | 'claude'
+  // Can be overridden at runtime via Settings → AI panel.
+  provider: 'groq',
+
+  // ── Groq  (free tier, fast, recommended default) ─────────────────────────
+  // Get key: https://console.groq.com → API Keys
+  groq: {
+    key:   'gsk_your_groq_api_key_here',
+    model: 'llama-3.3-70b-versatile',   // optional — this is the default
+  },
+
+  // ── Google Gemini ─────────────────────────────────────────────────────────
+  // Get key: https://aistudio.google.com → Get API key
+  gemini: {
+    key:   'your-gemini-api-key',
+    model: 'gemini-2.5-flash',           // optional — this is the default
+  },
+
+  // ── OpenAI ────────────────────────────────────────────────────────────────
+  // Get key: https://platform.openai.com → API keys
+  openai: {
+    key:   'sk-your-openai-api-key',
+    model: 'gpt-4.1-mini',              // optional — this is the default
+  },
+
+  // ── Anthropic Claude ──────────────────────────────────────────────────────
+  // Get key: https://console.anthropic.com → API Keys
+  // Note: browser-side Claude calls require the
+  //   anthropic-dangerous-direct-browser-access: true  header,
+  //   which the app sends automatically. Only use this for personal deployments.
+  claude: {
+    key:   'sk-ant-your-claude-api-key',
+    model: 'claude-haiku-4-5-20251001',  // optional — this is the default
+  },
+
+};
