@@ -1,0 +1,22 @@
+# ── ZenJournal .gitignore ──────────────────────────────────────────
+#
+# config.js holds your real API keys — NEVER commit it.
+# Commit config.js.example instead (no real keys).
+config.js
+
+# macOS metadata
+.DS_Store
+**/.DS_Store
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (if you ever add a build step)
+node_modules/
+npm-debug.log*
+
+# Local test artifacts
+*.local

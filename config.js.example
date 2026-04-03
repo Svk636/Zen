@@ -1,0 +1,57 @@
+// ═══════════════════════════════════════════════════════════════════
+//  ZenJournal — Deployment Config  (config.js)
+//
+//  HOW TO USE
+//  1. Copy this file:  cp config.js.example config.js
+//  2. Fill in your keys below
+//  3. config.js is gitignored — it never gets committed
+//
+//  PRIORITY ORDER (per key)
+//    1. localStorage  — user-saved value from the Settings panel (wins always)
+//    2. This file     — deployment default (what you set here)
+//    3. Hardcoded     — built-in fallback in index.html (Supabase anon key only)
+//
+//  GitHub Pages: commit this example; deploy config.js manually or via CI secret injection.
+//  Netlify / Vercel: generate config.js from env vars in your build command, e.g.
+//    echo "window.APP_CONFIG = { supabase: { url: '$SUPABASE_URL', key: '$SUPABASE_KEY' } ... };" > config.js
+// ═══════════════════════════════════════════════════════════════════
+
+window.APP_CONFIG = {
+
+  // ── Supabase (cloud sync + auth) ──────────────────────────────
+  // Leave blank to use the hardcoded fallback in index.html.
+  // The anon key is safe to expose — RLS restricts every row to auth.uid().
+  supabase: {
+    url: '',   // e.g. 'https://xyzxyzxyz.supabase.co'
+    key: '',   // e.g. 'eyJhbGci...'  (anon / public key only)
+  },
+
+  // ── Default AI provider ───────────────────────────────────────
+  // One of: 'groq' | 'gemini' | 'openai' | 'claude'
+  // The user can override this in the Settings panel (saved to localStorage).
+  provider: 'groq',
+
+  // ── Groq  (free tier — recommended default) ───────────────────
+  groq: {
+    key:   '',  // from https://console.groq.com
+    model: 'llama-3.3-70b-versatile',  // or 'mixtral-8x7b-32768'
+  },
+
+  // ── Google Gemini (free tier) ─────────────────────────────────
+  gemini: {
+    key:   '',  // from https://aistudio.google.com/app/apikey
+  },
+
+  // ── OpenAI ────────────────────────────────────────────────────
+  openai: {
+    key:   '',  // from https://platform.openai.com/api-keys
+    model: 'gpt-4.1-mini',
+  },
+
+  // ── Anthropic Claude ──────────────────────────────────────────
+  claude: {
+    key:   '',  // from https://console.anthropic.com
+    model: 'claude-haiku-4-5-20251001',
+  },
+
+};

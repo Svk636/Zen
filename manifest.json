@@ -1,0 +1,81 @@
+{
+  "name": "झेन जर्नल",
+  "short_name": "झेन जर्नल",
+  "description": "वेळ-निश्चित सत्रे आणि क्लाउड सिंकसह सजग विचार व संकल्प नोंदवही",
+  "lang": "mr",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f7f5f0",
+  "theme_color": "#f7f5f0",
+  "categories": ["productivity", "lifestyle"],
+  "icons": [
+    {
+      "src": "icons/icon-16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "विचार नोंदवा",
+      "short_name": "विचार",
+      "description": "नवा विचार त्वरित नोंदवा",
+      "url": "./?type=thought",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "संकल्प नोंदवा",
+      "short_name": "संकल्प",
+      "description": "नवा संकल्प सत्र सुरू करा",
+      "url": "./?type=intention",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "कल्पना नोंदवा",
+      "short_name": "कल्पना",
+      "description": "नवी कल्पना त्वरित नोंदवा",
+      "url": "./?type=idea",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "विजय नोंदवा",
+      "short_name": "विजय",
+      "description": "आजचा विजय साजरा करा",
+      "url": "./?type=win",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [],
+  "prefer_related_applications": false
+}
